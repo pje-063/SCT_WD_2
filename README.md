@@ -1,13 +1,14 @@
 
-SCT_WD_2
+# SCT_WD_2
 
-Stopwatch Web Application
+## Stopwatch Web Application
 
-SkillCraft Technology - Web Development Internship
+### SkillCraft Technology - Web Development Internship
 
 This project is an interactive and responsive Stopwatch Web Application developed using HTML, CSS, and JavaScript.
 
-Features
+
+### Features
 
 - Real-Time Time Tracking (Hours, Minutes, Seconds, Milliseconds)
 - Start, Pause, and Reset Functionality
@@ -17,7 +18,7 @@ Features
 - Responsive Layout Optimized for All Screen Sizes
 - Clean & Modular Codebase
 
-Technologies Used
+### Technologies Used
 
 - HTML5
 - CSS3
