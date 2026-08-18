@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Rich radial gradient background */
+    background: radial-gradient(circle at 20% 20%, #0a2e21 0%, #06110d 50%, #030806 100%);
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Card Container */
+.stopwatch-card {
+    background: linear-gradient(145deg, #131916, #0d1210);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    border-radius: 24px;
+    padding: 32px 28px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(16, 185, 129, 0.05);
+    text-align: center;
+}
+
+/* Icon Badge */
+.logo-badge {
+    width: 56px;
+    height: 32px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.logo-badge i {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+/* Titles */
+.app-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.app-subtitle {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #10b981;
+}
+
+.status-indicator .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10b981;
+}
+
+.status-indicator.paused {
+    color: #f59e0b;
+}
+
+.status-indicator.paused .dot {
+    background-color: #f59e0b;
+    box-shadow: 0 0 8px #f59e0b;
+}
+
+/* Main Display Box */
+.timer-box {
+    background: linear-gradient(180deg, #09130e, #0e1a14);
+    border: 1px solid rgba(16, 185, 129, 0.12);
+    border-radius: 16px;
+    padding: 24px 10px;
+    margin-bottom: 24px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Controls Grid */
+.controls-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn i {
+    font-size: 0.85rem;
+}
+
+/* Button Variants */
+.btn-emerald {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.btn-emerald:hover:not(:disabled) {
+    background: linear-gradient(135deg, #34d399, #059669);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+}
+
+.btn-dark {
+    background: linear-gradient(145deg, #232d36, #1a2229);
+    color: #e5e7eb;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-dark:hover:not(:disabled) {
+    background: linear-gradient(145deg, #2c3843, #212b34);
+    transform: translateY(-1px);
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Lap Records Section */
+.laps-section {
+    text-align: left;
+    background-color: rgba(9, 19, 14, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.laps-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #10b981;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.laps-list {
+    list-style: none;
+    max-height: 140px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Custom Scrollbar for Laps */
+.laps-list::-webkit-scrollbar {
+    width: 4px;
+}
+.laps-list::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 4px;
+}
+
+.laps-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #d1d5db;
+}
+
+.laps-list li:first-child {
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #ffffff;
+}
